@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NotificationListComponent } from './notification-list/notification-list.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotificationListComponent
+    NotificationListComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule
