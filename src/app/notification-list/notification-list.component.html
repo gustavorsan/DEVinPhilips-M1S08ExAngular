@@ -1,40 +1,15 @@
 
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">
+    <li class="list-group-item"  *ngFor="let notification of notifications" >
       <div class="card" style="width: 18rem;">
         <div class="card-header">
-          <h5 class="card-title">Atenção</h5>
+          <h5 class="card-title">{{notification.title}}</h5>
         </div>
         <div class="card-body">
-          <p>Projeto proximo da data de expiração</p>
-          <span >11/12/2022</span>
+          <p>{{notification.description}}</p>
+          <span>{{notification.date}}</span>
         </div>
       </div>
     </li>
-
-    <li class="list-group-item">
-      <div class="card" style="width: 18rem;">
-        <div class="card-header">
-          <h5 class="card-title">Noticação</h5>
-        </div>
-        <div class="card-body">
-          <p>Projeto proximo da data de expiração</p>
-          <span >11/12/2022</span>
-        </div>
-      </div>
-    </li>
-
-    <li class="list-group-item">
-      <div class="card" style="width: 18rem;">
-        <div class="card-header">
-          <h5 class="card-title">Cancelado</h5>
-        </div>
-        <div class="card-body">
-          <p>Projeto proximo da data de expiração</p>
-          <span >11/12/2022</span>
-        </div>
-      </div>
-    </li>
-
   </ul>
 
