@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule,Title  } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NotificationListComponent } from './notification-list/notification-list.component';
@@ -16,7 +16,9 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    Title 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,14 +1,28 @@
 
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"  *ngFor="let notification of notifications" >
+    <li class="list-group-item"  *ngFor="let notification of notifications; let index = index;" >
       <div class="card" style="width: 18rem;">
         <div class="card-header">
           <h5 class="card-title">{{notification.title}}</h5>
         </div>
         <div class="card-body">
           <p>{{notification.description}}</p>
-          <span>{{notification.date}}</span>
+          <div class="row">
+            <div class="col-sm">
+              <span>{{notification.date}}</span>
+            </div>
+            <div class="col-sm">
+              <button 
+                class="btn btn-primary" 
+                [disabled]="notification.lido"
+                (click)="onReadClick(index)"
+                >
+                {{notification.lido ? 'Lido' : 'Novo'}}
+              </button>
+            </div>
+          </div>
         </div>
+        
       </div>
     </li>
   </ul>

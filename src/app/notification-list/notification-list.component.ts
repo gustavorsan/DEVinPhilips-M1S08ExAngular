@@ -11,17 +11,25 @@ export class NotificationListComponent {
     {
       title: 'Atenção',
       description: 'A data de entrega é até o dia 04-11-2022',
-      date: '01-11-2022'
+      date: '01-11-2022',
+      lido: false
     },
     {
       title: 'Atenção',
       description:  'A data de entrega é até o dia 04-11-2022',
-      date: '03-11-2022'
+      date: '03-11-2022',
+      lido: false
     },
     {
       title: 'Aviso',
       description: 'projeto entregue com sucesso',
-      date: '04-11-2022'
+      date: '04-11-2022',
+      lido: false
     }
   ]
+
+  onReadClick(index:number){
+    this.notifications[index].lido = true;
+  }
+
 }
